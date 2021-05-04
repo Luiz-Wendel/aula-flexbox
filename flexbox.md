@@ -10,6 +10,18 @@ Para melhor entender o conceito de flexbox você deve compreender dois  conceito
 
 #### Você será capaz de:
 
+Fazer com que um elemento pai (contêiner) seja flexível para poder melhor acomodar seus elementos filhos (flex itens) de maneira que fiquem bem alinhados e distribuídos na página.
+
+Utilizar corretamente os atributos provenientes do uso da propriedade flex tanto para o caso dos contêineres quanto para o caso dos flex itens.
+
+Disponibilizar os elementos filhos de um flex contêiner na forma de linha e/ou coluna.
+
+Entender conceitos referentes ao Flexbox como:
+  * Flex contêiner;
+  * Flex item;
+  * Eixo principal;
+  * Eixo cruzado.
+
 #### Porque isso é importante?
 
 #### Conteúdos
