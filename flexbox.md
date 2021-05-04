@@ -34,4 +34,16 @@ Imagine, por exemplo, que sempre que você precisasse adicionar um novo item a u
 
 #### Recursos Adicionais
 
+[Guia de Flexbox escrito pela MDN](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox "MDN")
+
+[CSS FlexBox: Um Guia Visual](https://www.alura.com.br/artigos/css-guia-do-flexbox?gclid=EAIaIQobChMIleKjwumu8AIV0AaICR20pA9hEAAYASAAEgIxcvD_BwE "Alura")
+
+[Guia completo para Flexbox (em inglês)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/ "CSS-Tricks")
+
+[Ajude o Froggy e seus amigos utilizando CSS](https://flexboxfroggy.com/ "Flexbox Froggy")
+
+[Aprenda Flexbox com um jogo de tower defense](http://www.flexboxdefense.com/ "Flebox Defense")
+
+[Escreva comandos do Flexbox para se defender de zumbis](https://mastery.games/flexboxzombies/ "Flexbox Zombies")
+
 #### Gabarito
