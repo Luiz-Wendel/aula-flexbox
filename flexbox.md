@@ -24,6 +24,10 @@ Entender conceitos referentes ao Flexbox como:
 
 #### Porque isso é importante?
 
+Atualmente você pode entrar em um site de diversas maneiras (através de um computador, celular, tablet, videogame, entre outros) e com isso fica difícil definir qual o tamanho da tela que vai mostrar o conteúdo. É aí que entra a necessidade de um elemento flexível, que pode alterar o seu tamanho e a disposição de seu conteúdo conforme o tamanho disponível na tela.
+
+Imagine, por exemplo, que sempre que você precisasse adicionar um novo item a uma lista de produtos tivesse que adicionar a posição exata dele na tela para ele ficar alinhado com os demais itens, essa forma seria muito complexa. Agora imagine que você tenha um elemento que conforme você vai adicionando itens dentro dele ele se expande de forma a adicionar o novo elemento e ainda deixa ele alinhado e agrupado conforme a posição dos demais itens, independentemente de saber o tamanho do conteúdo, essa segunda forma seria muito mais simples. E esse é o comportamento que você consegue ao utilizar o Flexbox.
+
 #### Conteúdos
 
 #### Exercícios
