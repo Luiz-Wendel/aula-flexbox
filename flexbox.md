@@ -48,13 +48,79 @@ O `flex-direction: row` define o **eixo principal** como sendo **horizontal**, d
 
 Enquanto que o `flex-direction: column` define o **eixo principal** como sendo **vertical**, de cima para baixo, e o **eixo cruzado** como sendo **horizontal**, da esquerda para a direita.
 
-Opções:
-  * row *(linha)*;
-  * row-reverse *(linha reversa)*;
-  * column *(coluna)*;
-  * column-reverse *(coluna reversa)*.
+*Para testar na prática, crie um arquivo html na sua pasta do conteúdo do dia de hoje no seu repositório `trybe-exercises` e copie e cole o seguinte código que será usado durante todo o conteúdo:*
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-<!-- TODO: Exemplos -->
+      body {
+        background-color: black;
+        color: white;
+      }
+
+      .container {
+        margin: 0 auto;
+        position: relative;
+        top: 50%;
+        background-color: darkred;
+        width: 500px;
+        height: 500px;
+      }
+
+      .item {
+        background-color: darkblue;
+        width: 25px;
+        /* height: 25px; */
+      }
+
+      .item:nth-of-type(3) {
+        background-color: blueviolet;
+      }
+
+      .item:nth-of-type(5) {
+        background-color: teal;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!--
+    !   Para uma melhor experiência dos exemplos
+    !   do conteúdo modifique apenas o CSS!
+  -->
+    <div class="container">
+      <div class="item">1</div>
+      <div class="item">2</div>
+      <div class="item">3</div>
+      <div class="item">4</div>
+      <div class="item">5</div>
+      <div class="item">6</div>
+      <div class="item">7</div>
+      <div class="item">8</div>
+      <div class="item">9</div>
+      <div class="item">10</div>
+    </div>
+  </body>
+</html>
+```
+
+Exercícios (altere apenas o CSS, mais especificamente a classe `.container`):
+  1. Adicione a propriedade `display: flex;`;
+  2. Quando você define o `display` como `flex` temos o comportamento `flex-direction: row;` como padrão, mas adicione essa propriedade mesmo assim (nada deve mudar);
+  3. Outro valor utilizado para essa propriedade é o `row-reverse` *(linha reversa)*, mude o valor da propriedade `flex-direction` para este novo valor e preste atenção nos números;
+  4. Você observou os principais valores para o eixo principal horizontal, agora mude a propriedade `flex-direction` para `column` *(coluna)* e observe o eixo principal mudar para a vertical;
+  5. Você também pode inverter o sentido do eixo principal que nem foi feito no terceiro exemplo mudando o valor do `flex-direction` para `column-reverse` *(coluna reversa)*.
 
 #### justify-content
 
@@ -62,39 +128,45 @@ A propriedade `justify-content` define como os flex itens serão alinhados e/ou 
 
 É importante notar que o alinhamento dessa propriedade é feito conforme o **eixo principal** do flex contêiner.
 
-Opções:
-  * flex-start;
-  * flex-end;
-  * space-between;
-  * space-around;
-  * space-evenly;
-  * center.
-
-<!-- TODO: Exemplos -->
+Vamos testar as principais opções?
+Volte no seu arquivo HTML e siga os exercícios:
+  1. Retorne o valor de `flex-direction` para `row`;
+  2. Adicione a propriedade `justify-content: flex-start;`, nada mudou! :disappointed_relieved: Isso se deve ao fato do `flex-start` ser o valor padrão;
+  3. Agora teste com os valores:
+    3.1. `flex-end` *(flex-fim)*;
+    3.2. `space-between` *(espaço-entre)*;
+    3.3. `space-around` *(espaço-em-volta)*;
+    3.4. `space-evenly` *(espaço-igualitário)*;
+    3.5. `center` *(centro)*.
+  4. Caso você fique curioso vale a pena repetir o terceiro exemplo com o `flex-direction: row;`.
 
 #### align-items
 
 A propriedade `align-items` tem o com objetivo alinhar os flex itens conforme o **eixo cruzado**. Quando essa propriedade não é definida seu comportamento padrão é o `stretch` *(esticar)*.
 
-Opções:
-  * stretch;
-  * center;
-  * flex-start;
-  * flex-end;
-  * baseline.
-
-<!-- TODO: Exemplos -->
+Pronto para ver na prática?
+Volte no seu arquivo HTML e siga os exercícios:
+  1. Altere as propriedades para ficar assim: `flex-direction: row;` e `justify-content: flex-start;`;
+  2. Adicione a propriedade `align-items: stretch`, nada mudou! :pensive: Imagino que você já saiba o porquê, certo? Isso mesmo! `stretch` eh o valor padrão;
+  3. Agora teste com os valores:
+    3.1. `flex-start` *(flex-início)*;
+    3.2. `flex-end` *(flex-fim)*;
+    3.3. `center` *(centro)*;
+  4. Pequeno desafio: tentar deixar o conteúdo centralizado no quadrado vermelho.
 
 #### flex-wrap
 
 Por padrão (`flex-wrap: nowrap`) o flex contêiner junta todos os flex itens para caber na mesma linha/coluna, mas com a propriedade `flex-wrap` podemos definir o comportamento de wrap *("embrulho")* do contêiner. Ou seja, você pode fazer com que o flex contêiner crie novas linhas/colunas (dependendo do eixo) conforme o tamanho dos flex itens vão ultrapassando o tamanho do **eixo principal** do flex contêiner.
 
-Opções:
-  * nowrap;
-  * wrap;
-  * wrap-reverse.
-
-<!-- TODO: Exemplos -->
+Que tal praticar?
+Volte no seu arquivo HTML e siga os exercícios:
+  1. Defina as propriedades `flex-direction: row;`, `justify-content: flex-start;` e `align-items: stretch;`;
+  2. Altere o valor da `width` da classe `.item` para `100px`;
+  3. Adicione `flex-wrap: nowrap;`, nada deve mudar. Fique atento se você está adicionando para a classe `.container`;
+  4. Teste os outros valores:
+    4.1. `wrap` *(embrulhar)*;
+    4.2. `wrap-reverse` *(embrulhar-inverso)*.
+  5. Agora mude o valor da `width` da classe `.item` de volta para `25px`.
 
 #### flex-flow
 
@@ -105,25 +177,29 @@ Exemplo:
 flex-flow: row wrap;
 ```
 
-Caso você queira testar essa nova propriedade, você pode usar o código do exercício anterior. :wink:
+Exercícios! :smile:
+  1. Remova as propriedades `flex-direction` e `flex-wrap`;
+  2. Adicione a propriedade `flex-flow: row nowrap;`, nada vai mudar;
+  3. Agora teste com outros valores, lembre dos valores aprendidos (exemplo: `flex-flow: row-reverse wrap;`).
 
 #### align-content
 
-Você pode controlar o espaçamento entre as linhas/colunas criadas pelo wrap com a propriedade `align-content`.
+Você pode controlar o espaçamento entre as linhas/colunas criadas pelo wrap com a propriedade `align-content`. Essa propriedade possui valores semelhantes ao do `justify-content`, porem seu valor padrao eh o `normal`.
 
 É importante entender que essa propriedade não vai ter efeito caso a propriedade `flex-wrap` tenha o valor `nowrap`.
 
-Opções mais usadas:
-  * flex-start
-  * flex-end
-  * center
-  * space-between
-  * space-around
-  * stretch
+Voce pode testar a nova propriedade com alguns exercicios:
+  1. Defina as seguintes propriedades: `flex-flow: row wrap;`, `justify-content: flex-start;` e `align-items: stretch;`;
+  2. Adicione a propriedade `align-content: normal;`, nada muda;
+  3. Teste os seguintes valores:
+    3.1. `flex-start`;
+    3.2. `flex-end`;
+    3.3. `center`;
+    3.4. `space-between`;
+    3.5. `space-around`;
+    3.6. `stretch`.
 
 Para uma lista completa de opcoes e mais informacoes sobre a propriedade voce pode visitar a pagina da [MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/align-content).
-
-Caso você queira testar essa nova propriedade, você pode usar o código do exercício anterior. :wink:
 
 ### Propriedades dos flex itens *(elementos filhos)*
 
@@ -133,13 +209,21 @@ A propriedade `flex-shrink` permite aos flex itens diminuírem de tamanho caso o
 
 O valor recebido pela propriedade é um número que especifica a razão que o item vai diminuir em relação aos outros itens. Quando essa propriedade não é definida seu valor padrão é `1`.
 
-<!-- TODO: Exemplos -->
+Que tal exercitar?
+  1. Antes de começar você deve remover todas as propriedades da classe `.container` que se referem ao flex, e deixar apenas o `display: flex;`;
+  2. Remova o comentário da propriedade `height` *(agora na classe `.item`)* e altere a `width` para `75px`;
+  3. Adicionar a propriedade `flex-shrink: 1;` para o seletor `.item:nth-of-type(3)`, nada muda;
+  4. Agora teste com outros valores (exemplo: 0, 2), você também pode adicionar o `flex-shrink` para o seletor `.item:nth-of-type(5)`.
 
 #### flex-grow
 
 Conforme você aprendeu na propriedade anterior que se refere a razão que o item vai diminuir, a propriedade `flex-grow` define a razão que o item vai aumentar conforme o tamanho do flex contêiner aumenta. A propriedade também recebe como valor um número e tem como valor padrão `0`.
 
-<!-- TODO: Exemplos -->
+Aqui estão alguns exercícios para você praticar:
+  1. Para esse exercício você deve retornar o valor da `width` para `25px`;
+  2. Adicione a propriedade `flex-grow: 0;` para o seletor `.item:nth-of-type(3)`, nada muda;
+  3. Altere o seu valor para `1` e veja o que acontece;
+  4. Agora teste adicionando a propriedade para o seletor `.item:nth-of-type(5)` e mude os valores para entender melhor como funciona.
 
 #### flex-basis
 
@@ -147,7 +231,11 @@ Caso você queira definir um valor inicial para o tamanho do flex item a proprie
 
 Quando essa propriedade não é definida seu comportamento padrão é ajustar o tamanho baseado no conteúdo e tem valor padrão de `auto`.
 
-<!-- TODO: Exemplos -->
+Habemus exercícios:
+  1. Adicione a propriedade `flex-basis: 50px;` na classe `.item`;
+  2. Perceba que as propriedades `flex-shrink` e `flex-grow` dos seletores nao tem mais efeito pois os flex itens ocupam todo o espaço do flex contêiner;
+  3. Agora mude o valor para `40px`, as propriedades `flex-shrink` e `flex-grow` voltam a funcionar;
+  4. Teste mais alguns valores a sua escolha.
 
 #### flex
 
@@ -158,7 +246,11 @@ Exemplo:
 flex: 0 1 auto;
 ```
 
-<!-- TODO: Exemplos -->
+Exercícios? ~~Não~~ Sim, exercícios!
+  1. Remova as propriedades `flex-basis`, `flex-shrink` e `flex-grow` dos seletores e da classe `.item`;
+  2. Adicione a propriedade `flex: 0 1 auto;` na classe `.item`, nada muda;
+  3. Altere os valores conforme você aprendeu nas propriedades passadas;
+  4. Não se esqueça de testar adicionando a propriedade `flex` para os seletores.
 
 #### order
 
@@ -166,19 +258,20 @@ Mudar a ordem em que os flex itens são mostrados dentro do flex contêiner? Sim
 
 A ordem que os elementos aparecem é feita em ordem crescente do valor da propriedade `order`. Mas se mais de um flex item tiver o mesmo valor, o que acontece? O flex item que vier primeiro no HTML vai aparecer antes. Também é importante ressaltar que você pode utilizar valores negativos. :wink:
 
-<!-- TODO: Exemplos -->
-
-#### justify-self
-
-Você aprendeu a alinhar os flex itens no **eixo principal** usando a propriedade `justify-content` no flex contêiner, mas e se você quiser que um flex item específico tenha um alinhamento no **eixo principal** diferente do restante? A propriedade `justify-self` resolve esse problema, com ela você pode mudar o alinhamento de um único flex item sem mudar o alinhamento no **eixo principal** dos outros flex itens.
-
-<!-- TODO: Exemplos -->
+Praticar? ~~Nunca~~ Sempre!
+  1. Adicione a propriedade `order: 0;` ao seletor `.item:nth-of-type(3)`, nada muda;
+  2. Agora coloque um valor maior que `0`;
+  3. Agora coloque um valor menor que `0`;
+  4. Adicione a propriedade `order` ao outro seletor, você também pode criar outros seletores, deixe a imaginação à solta.
 
 #### align-self
 
 Assim como você aprendeu na propriedade anterior, também é possível mudar o alinhamento no eixo principal de um flex item, você também pode mudar o alinhamento no **eixo cruzado** de um flex item específico sem alterar o alinhamento dos outros flex itens. Para conseguir esse efeito você pode usar a propriedade `align-self`.
 
-<!-- TODO: Exemplos -->
+Exercícios finais: :sweat_smile:
+  1. Adicione a propriedade `align-self: flex-start;` ao seletor `.item:nth-of-type(3)`, nada muda;
+  2. Agora altere seu valor para `center`;
+  3. Deixe a imaginação fluir e teste com outros valores, vale a pena colocar a propriedade em outros seletores para testar também.
 
 ## Exercícios
 
