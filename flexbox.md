@@ -122,6 +122,8 @@ Exercícios (altere apenas o CSS, mais especificamente a classe `.container`):
   4. Você observou os principais valores para o eixo principal horizontal, agora mude a propriedade `flex-direction` para `column` *(coluna)* e observe o eixo principal mudar para a vertical;
   5. Você também pode inverter o sentido do eixo principal que nem foi feito no terceiro exemplo mudando o valor do `flex-direction` para `column-reverse` *(coluna reversa)*.
 
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex-direction).
+
 #### justify-content
 
 A propriedade `justify-content` define como os flex itens serão alinhados e/ou espaçados entre si. Quando essa propriedade não é definida seu comportamento padrão é o `flex-start` *(flex-início)*.
@@ -140,6 +142,8 @@ Volte no seu arquivo HTML e siga os exercícios:
     3.5. `center` *(centro)*.
   4. Caso você fique curioso vale a pena repetir o terceiro exemplo com o `flex-direction: row;`.
 
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content).
+
 #### align-items
 
 A propriedade `align-items` tem o com objetivo alinhar os flex itens conforme o **eixo cruzado**. Quando essa propriedade não é definida seu comportamento padrão é o `stretch` *(esticar)*.
@@ -153,6 +157,8 @@ Volte no seu arquivo HTML e siga os exercícios:
     3.2. `flex-end` *(flex-fim)*;
     3.3. `center` *(centro)*;
   4. Pequeno desafio: tentar deixar o conteúdo centralizado no quadrado vermelho.
+
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/align-items).
 
 #### flex-wrap
 
@@ -168,6 +174,8 @@ Volte no seu arquivo HTML e siga os exercícios:
     4.2. `wrap-reverse` *(embrulhar-inverso)*.
   5. Agora mude o valor da `width` da classe `.item` de volta para `25px`.
 
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex-wrap).
+
 #### flex-flow
 
 Como as propriedades `flex-direction` e`flex-wrap` são muito usadas em conjunto, foi criado uma nova propriedade que combina as duas, a `flex-flow`, que recebe como valor duas `strings` separadas por um espaço, a primeira string referente ao `flex-direction`e a segunda string referente ao `flex-wrap`.
@@ -181,6 +189,8 @@ Exercícios! :smile:
   1. Remova as propriedades `flex-direction` e `flex-wrap`;
   2. Adicione a propriedade `flex-flow: row nowrap;`, nada vai mudar;
   3. Agora teste com outros valores, lembre dos valores aprendidos (exemplo: `flex-flow: row-reverse wrap;`).
+
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex-flow).
 
 #### align-content
 
@@ -199,7 +209,7 @@ Voce pode testar a nova propriedade com alguns exercicios:
     3.5. `space-around`;
     3.6. `stretch`.
 
-Para uma lista completa de opcoes e mais informacoes sobre a propriedade voce pode visitar a pagina da [MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/align-content).
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/align-content).
 
 ### Propriedades dos flex itens *(elementos filhos)*
 
@@ -215,6 +225,8 @@ Que tal exercitar?
   3. Adicionar a propriedade `flex-shrink: 1;` para o seletor `.item:nth-of-type(3)`, nada muda;
   4. Agora teste com outros valores (exemplo: 0, 2), você também pode adicionar o `flex-shrink` para o seletor `.item:nth-of-type(5)`.
 
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink).
+
 #### flex-grow
 
 Conforme você aprendeu na propriedade anterior que se refere a razão que o item vai diminuir, a propriedade `flex-grow` define a razão que o item vai aumentar conforme o tamanho do flex contêiner aumenta. A propriedade também recebe como valor um número e tem como valor padrão `0`.
@@ -224,6 +236,8 @@ Aqui estão alguns exercícios para você praticar:
   2. Adicione a propriedade `flex-grow: 0;` para o seletor `.item:nth-of-type(3)`, nada muda;
   3. Altere o seu valor para `1` e veja o que acontece;
   4. Agora teste adicionando a propriedade para o seletor `.item:nth-of-type(5)` e mude os valores para entender melhor como funciona.
+
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow).
 
 #### flex-basis
 
@@ -236,6 +250,8 @@ Habemus exercícios:
   2. Perceba que as propriedades `flex-shrink` e `flex-grow` dos seletores nao tem mais efeito pois os flex itens ocupam todo o espaço do flex contêiner;
   3. Agora mude o valor para `40px`, as propriedades `flex-shrink` e `flex-grow` voltam a funcionar;
   4. Teste mais alguns valores a sua escolha.
+
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis).
 
 #### flex
 
@@ -252,6 +268,8 @@ Exercícios? ~~Não~~ Sim, exercícios!
   3. Altere os valores conforme você aprendeu nas propriedades passadas;
   4. Não se esqueça de testar adicionando a propriedade `flex` para os seletores.
 
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/flex).
+
 #### order
 
 Mudar a ordem em que os flex itens são mostrados dentro do flex contêiner? Sim, você pode! Basta usar a propriedade `order`, que recebe um número como valor e que se refere a posição dele referente aos outros elementos. Quando você não define a propriedade o seu valor padrão é `0`.
@@ -264,6 +282,8 @@ Praticar? ~~Nunca~~ Sempre!
   3. Agora coloque um valor menor que `0`;
   4. Adicione a propriedade `order` ao outro seletor, você também pode criar outros seletores, deixe a imaginação à solta.
 
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/order).
+
 #### align-self
 
 Assim como você aprendeu na propriedade anterior, também é possível mudar o alinhamento no eixo principal de um flex item, você também pode mudar o alinhamento no **eixo cruzado** de um flex item específico sem alterar o alinhamento dos outros flex itens. Para conseguir esse efeito você pode usar a propriedade `align-self`.
@@ -272,6 +292,8 @@ Exercícios finais: :sweat_smile:
   1. Adicione a propriedade `align-self: flex-start;` ao seletor `.item:nth-of-type(3)`, nada muda;
   2. Agora altere seu valor para `center`;
   3. Deixe a imaginação fluir e teste com outros valores, vale a pena colocar a propriedade em outros seletores para testar também.
+
+Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self).
 
 ## Exercícios
 
