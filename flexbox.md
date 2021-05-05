@@ -198,7 +198,7 @@ Você pode controlar o espaçamento entre as linhas/colunas criadas pelo wrap co
 
 É importante entender que essa propriedade não vai ter efeito caso a propriedade `flex-wrap` tenha o valor `nowrap`.
 
-Voce pode testar a nova propriedade com alguns exercicios:
+Você pode testar a nova propriedade com alguns exercícios:
   1. Defina as seguintes propriedades: `flex-flow: row wrap;`, `justify-content: flex-start;` e `align-items: stretch;`;
   2. Adicione a propriedade `align-content: normal;`, nada muda;
   3. Teste os seguintes valores:
@@ -297,7 +297,206 @@ Para mais informações você pode acessar a [documentação do MDN](https://dev
 
 ## Exercícios
 
-<!-- TODO: Exercicios + EXTRAS -->
+### HTTP Gato
+
+Agora você vai criar uma página flexível usando imagens do site [HTTP Cats](https://http.cat/).
+
+Copie o HTML abaixo em um arquivo `index.html`:
+
+```html
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox - HTTP Gato</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" id="home">
+        <i id="logo" class="fas fa-cat"></i>
+        <p>HTTP Gato</p>
+      </a>
+      <nav class="links">
+        <ul>
+          <li>Informação</li>
+          <li>Sucesso</li>
+          <li>Redirecionamentos</li>
+          <li>Cliente</li>
+          <li>Servidor</li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="images-container">
+        <div class="image">
+          <img src="https://http.cat/100" alt="Erro 100" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/101" alt="Erro 101" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/102" alt="Erro 102" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/200" alt="Erro 200" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/201" alt="Erro 201" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/202" alt="Erro 202" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/204" alt="Erro 204" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/206" alt="Erro 206" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/207" alt="Erro 207" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/300" alt="Erro 300" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/301" alt="Erro 301" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/302" alt="Erro 302" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/303" alt="Erro 303" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/304" alt="Erro 304" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/305" alt="Erro 305" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/307" alt="Erro 307" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/308" alt="Erro 308" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/400" alt="Erro 400" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/401" alt="Erro 401" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/402" alt="Erro 402" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/404" alt="Erro 404" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/405" alt="Erro 405" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/406" alt="Erro 406" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/408" alt="Erro 408" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/409" alt="Erro 409" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/500" alt="Erro 500" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/501" alt="Erro 501" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/502" alt="Erro 502" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/503" alt="Erro 503" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/504" alt="Erro 504" />
+        </div>
+        <div class="image">
+          <img src="https://http.cat/506" alt="Erro 506" />
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Imagens obtidas do site <a href="https://http.cat/">http.cat</a> &copy;
+        HTTP Gato
+      </p>
+    </footer>
+  </body>
+</html>
+```
+
+E o conteúdo abaixo em um arquivo `style.css`, o arquivo CSS tem que estar na mesma pasta do arquivo HTML, caso você queira colocar em outra pasta não se esqueça de mudar o caminho do link no arquivo HTML:
+
+```css
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+```
+
+Os prints dos exemplos usados foram feitos usando o tamanho da página como sendo de um laptop (1440px, 900px), você pode utilizar a extensão [Window Resizer](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh) para a desenvolver a página no mesmo tamanho.
+
+Agora a prática!
+  1. Altere o CSS para que a logo e o nome do site fiquem lado a lado, faça a mesma coisa para os itens da tag `nav`;
+    ![ex-01](https://drive.google.com/uc?export=view&id=1R-LOEpgfeHu1tlLqnybyatKaySPTTgA7)
+
+  2. Agora faça com que o conteúdo do `header` fique em uma linha e separados entre si e com um espaço entre as bordas horizontais do seu contêiner;
+    ![ex-02](https://drive.google.com/uc?export=view&id=15Ul5Icksy1ji_hSlpdWWSjXGqfffLJnm)
+
+  3. Adicione um espaçamento entre os itens de navegação;
+    ![ex-03](https://drive.google.com/uc?export=view&id=1PPEYhJEXc9grGUQiDtCE0ZbvkPoRDKwh)
+
+  4. Estilize o `header` da sua maneira, segue um exemplo, mas fique a vontade para estilizar do jeito que o seu coração mandar!;
+    Exemplo:
+    ![ex-04](https://drive.google.com/uc?export=view&id=1-jL6lGHcct8gntp6QMvNmxAjOA_TkX4J)
+
+  5. Agora você tem que transformar a `div` com a classe `.images-container` em um flex contêiner que, caso o tamanho dos flex itens ultrapasse o tamanho da `div`, adicione novas linhas;
+    ![ex-05](https://drive.google.com/uc?export=view&id=1p50TlNaG5BJc0aL6RsbNatx8hFbx_NWe)
+
+  6. Que tal alinhar as imagens de forma a utilizar toda a largura da página e adicionar espaços em volta dos flex itens? Adicione também um `padding` para a tag `div` com classe `.image`;
+    Sua página deve ficar algo próximo a este exemplo:
+    ![ex-06](https://drive.google.com/uc?export=view&id=1Niw7H7q2YBmHCprFcqIwHXT6CF8vb9Et)
+
+  7. Para finalizar adicione alguns estilos no `footer` para combinar com os estilos utilizados no `header`, tente focar nas propriedades do Flexbox;
+  Exemplo:
+    ![ex-07](https://drive.google.com/uc?export=view&id=1rSOqjFkjZYoPsJxhr0t-Ikx_TlpW3S1p)
+
+  8. Agora que você já organizou bem a página que tal um desafio? Agrupe cada imagem em sua respectiva seção de [códigos de status de respostas HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status) *(não precisa entender o que cada um significa pois você verá isso em outro bloco)* e adicione um título para cada seção. Fique a vontade para alterar o HTML da forma que você achar que for melhor;
+  Seções:
+    Respostas de **informação** (100-199);
+    Respostas de **sucesso** (200-299);
+    **Redirecionamentos** (300-399);
+    Erros do **cliente** (400-499);
+    Erros do **servidor** (500-599).
+  Tente obter algo parecido com este exemplo:
+    ![ex-08](https://drive.google.com/uc?export=view&id=1Fh-tz6WlDjk6lr6ROJ8f79jXggB7_GB-)
+
+  ~~Por hoje eh soh pessoal!~~ Agora que você finalizou os exercícios, que tal fazer os exercícios extras para treinar sobre as propriedades dos flex itens?
+
+<!-- TODO: EXTRAS -->
 
 ## Recursos Adicionais
 
@@ -314,3 +513,365 @@ Para mais informações você pode acessar a [documentação do MDN](https://dev
 [Escreva comandos do Flexbox para se defender de zumbis](https://mastery.games/flexboxzombies/ "Flexbox Zombies")
 
 ## Gabarito
+
+### HTTP Gato
+
+Gabarito dos exercícios:
+  1. Altere o CSS para que a logo e o nome do site fiquem lado a lado, faça a mesma coisa para os itens da tag `nav`;
+  ```css
+  #home {
+    display: flex;
+  }
+
+  .links ul {
+    display: flex;
+  }
+  ```
+
+  2. Agora faça com que o conteúdo do `header` fique em uma linha e separados entre si e com um espaço entre as bordas horizontais do seu contêiner;
+  ```css
+  header {
+    display: flex;
+    justify-content: space-around;
+  }
+  ```
+
+  3. Adicione um espaçamento entre os itens de navegação;
+  ```css
+  .links {
+    width: 60%;
+  }
+
+  .links ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  ```
+
+  4. Estilize o `header` da sua maneira, segue um exemplo, mas fique a vontade para estilizar do jeito que o seu coração mandar!;
+  CSS para o exemplo apresentado:
+  ```css
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: darkred;
+  }
+
+  header a {
+    text-decoration: none;
+    color: darkred;
+    font-weight: 900;
+  }
+
+  #logo {
+    margin-right: 0.5em;
+  }
+
+  #home {
+    display: flex;
+  }
+
+  .links {
+    width: 60%;
+  }
+
+  .links ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .links ul li {
+    padding: 0.25em;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  ```
+
+  5. Agora você tem que transformar a `div` com a classe `.images-container` em um flex contêiner que, caso o tamanho dos flex itens ultrapasse o tamanho da `div`, adicione novas linhas;
+  ```css
+  .images-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  ```
+
+  6. Que tal alinhar as imagens de forma a utilizar toda a largura da página e adicionar espaços em volta dos flex itens? Adicione também um `padding` para a tag `div` com classe `.image`;
+  ```css
+  .images-container {
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .image {
+    padding: 1em;
+  }
+  ```
+
+  7. Para finalizar adicione alguns estilos no `footer` para combinar com os estilos utilizados no `header`, tente focar nas propriedades do Flexbox;
+  ```css
+  footer {
+    background-color: black;
+    color: darkred;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: darkred;
+    font-weight: 900;
+  }
+  ```
+
+  8. Agora que você já organizou bem a pagpáginaina que tal um desafio? Agrupe cada imagem em sua respectiva seção de [códigos de status de respostas HTTP](https://developer.mozilla.org/pt-BR/docs/Web/HTTP/Status) *(não precisa entender o que cada um significa pois você verá isso em outro bloco)* e adicione um título para cada seção. Fique a vontade para alterar o HTML da forma que você achar que for melhor;
+  Arquivo index.html:
+  ```html
+  <!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Flexbox - HTTP Gato</title>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+      <header>
+        <a href="#" id="home">
+          <i id="logo" class="fas fa-cat"></i>
+          <p>HTTP Gato</p>
+        </a>
+        <nav class="links">
+          <ul>
+            <li>Informação</li>
+            <li>Sucesso</li>
+            <li>Redirecionamentos</li>
+            <li>Cliente</li>
+            <li>Servidor</li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="information">
+          <h1>Respostas de informação</h1>
+          <div class="images-container">
+            <div class="image">
+              <img src="https://http.cat/100" alt="Erro 100" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/101" alt="Erro 101" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/102" alt="Erro 102" />
+            </div>
+          </div>
+        </section>
+        <section id="success">
+          <h1>Respostas de sucesso</h1>
+          <div class="images-container">
+            <div class="image">
+              <img src="https://http.cat/200" alt="Erro 200" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/201" alt="Erro 201" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/202" alt="Erro 202" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/204" alt="Erro 204" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/206" alt="Erro 206" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/207" alt="Erro 207" />
+            </div>
+          </div>
+        </section>
+        <section id="redirection">
+          <h1>Redirecionamentos</h1>
+          <div class="images-container">
+            <div class="image">
+              <img src="https://http.cat/300" alt="Erro 300" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/301" alt="Erro 301" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/302" alt="Erro 302" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/303" alt="Erro 303" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/304" alt="Erro 304" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/305" alt="Erro 305" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/307" alt="Erro 307" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/308" alt="Erro 308" />
+            </div>
+          </div>
+        </section>
+        <section id="client">
+          <h1>Erros do cliente</h1>
+          <div class="images-container">
+            <div class="image">
+              <img src="https://http.cat/400" alt="Erro 400" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/401" alt="Erro 401" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/402" alt="Erro 402" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/404" alt="Erro 404" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/405" alt="Erro 405" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/406" alt="Erro 406" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/408" alt="Erro 408" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/409" alt="Erro 409" />
+            </div>
+          </div>
+        </section>
+        <section id="server">
+          <h1>Erros do servidor</h1>
+          <div class="images-container">
+            <div class="image">
+              <img src="https://http.cat/500" alt="Erro 500" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/501" alt="Erro 501" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/502" alt="Erro 502" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/503" alt="Erro 503" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/504" alt="Erro 504" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/506" alt="Erro 506" />
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>
+          Imagens obtidas do site <a href="https://http.cat/">http.cat</a> &copy;
+          HTTP Gato
+        </p>
+      </footer>
+    </body>
+  </html>
+  ```
+  Arquivo style.css:
+  ```css
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: darkred;
+  }
+
+  header a {
+    text-decoration: none;
+    color: darkred;
+    font-weight: 900;
+  }
+
+  #logo {
+    margin-right: 0.5em;
+  }
+
+  #home {
+    display: flex;
+  }
+
+  .links {
+    width: 60%;
+  }
+
+  .links ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .links ul li {
+    padding: 0.25em;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .images-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .image {
+    padding: 1em;
+  }
+
+  footer {
+    background-color: black;
+    color: darkred;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: darkred;
+    font-weight: 900;
+  }
+  ```
