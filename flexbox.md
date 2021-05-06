@@ -2,7 +2,7 @@
 
 ## O que vamos aprender?
 
-Alinhar e distribuir corretamente o conteúdo da página HTML é essencial para criar uma página com uma boa experiência para o usuário. Nos blocos anteriores você aprendeu como posicionar os elementos utilizando as propriedades `float` e `position`. Agora você vai aprender sobre o Flexbox (Flexible Box).
+Alinhar e distribuir corretamente o conteúdo da página HTML é essencial para criar uma página com uma boa experiência para o usuário. Nos blocos anteriores você aprendeu como posicionar os elementos utilizando as propriedades `float` e `position`. Agora você vai aprender sobre o Flexbox (Flexible Box). :heart_eyes:
 
 O Flexbox foi um módulo de layout do CSS criado para facilitar a criação de estruturas flexíveis e responsivas que ajudam no alinhamento e distribuição dos elementos na página, sendo possível ser feito na vertical e/ou na horizontal.
 
@@ -12,7 +12,7 @@ Para melhor entender o conceito de flexbox você deve compreender dois  conceito
 
 Fazer com que um elemento pai (flex contêiner) seja flexível para poder melhor acomodar seus elementos filhos (flex itens) de maneira que fiquem bem alinhados e distribuídos na página.
 
-Utilizar corretamente os atributos provenientes do uso da propriedade flex tanto para o caso dos contêineres quanto para o caso dos flex itens.
+Utilizar corretamente os atributos provenientes do uso da propriedade flex tanto para o caso dos contêineres quanto para o caso dos flex itens. :sunglasses:
 
 Disponibilizar os elementos filhos de um flex contêiner na forma de linha e/ou coluna.
 
@@ -28,7 +28,7 @@ Entender conceitos referentes ao Flexbox como:
 
 Atualmente você pode entrar em um site de diversas maneiras (através de um computador, celular, tablet, videogame, etc.) e com isso fica difícil definir qual o tamanho da tela que vai mostrar o conteúdo. É aí que entra a necessidade de um elemento flexível, que pode alterar o seu tamanho e a disposição de seu conteúdo conforme o tamanho disponível na tela.
 
-Imagine, por exemplo, que sempre que você precisasse adicionar um novo item a uma lista de produtos tivesse que adicionar a posição exata dele na tela para ele ficar alinhado com os demais itens, essa forma seria muito complexa. Agora imagine que você tenha um elemento que, conforme você vai adicionando itens dentro dele, ele se expande de forma a adicionar o novo elemento e ainda o deixa alinhado e agrupado conforme a posição dos demais itens, independentemente de saber o tamanho do conteúdo, essa segunda forma seria muito mais simples. E esse é o comportamento que você consegue ao utilizar o Flexbox.
+Imagine, por exemplo, que sempre que você precisasse adicionar um novo item a uma lista de produtos tivesse que adicionar a posição exata dele na tela para ele ficar alinhado com os demais itens, essa forma seria muito complexa. Agora imagine que você tenha um elemento que, conforme você vai adicionando itens dentro dele, ele se expande de forma a adicionar o novo elemento e ainda o deixa alinhado e agrupado conforme a posição dos demais itens, independentemente de saber o tamanho do conteúdo, essa segunda forma seria muito mais simples. E esse é o comportamento que você consegue ao utilizar o Flexbox. :astonished:
 
 ## Conteúdos
 
@@ -44,7 +44,7 @@ A propriedade `display: flex` em um elemento permite que você use outras propri
 
 A propriedade `flex-direction` define a direção de alinhamento dos elementos filhos do contêiner. Quando essa propriedade não é definida seu comportamento padrão é `row` *(em tradução livre: linha)*.
 
-Para melhor entender como essa propriedade funciona você tem que entender um conceito muito usado no Flexbox, o **main-axis** *(em tradução livre: eixo principal)* e **cross-axis** *(em tradução livre: eixo cruzado)*. A propriedade `flex-direction` possui dois valores principais: `row` e `column`. A diferença entre esses dois valores são as direções do *eixo principal* e do *eixo cruzado*.
+Para melhor entender como essa propriedade funciona você tem que entender um conceito muito usado no Flexbox, o **main-axis** *(em tradução livre: eixo principal)* e **cross-axis** *(em tradução livre: eixo cruzado)*. A propriedade `flex-direction` possui dois valores principais: `row` e `column`. A diferença entre esses dois valores são as direções do *eixo principal* e do *eixo cruzado*. :dizzy_face:
 
 O `flex-direction: row` define o **eixo principal** como sendo **horizontal**, da esquerda para a direita, e o **eixo cruzado** sendo **vertical**, de cima para baixo.
 
@@ -166,7 +166,7 @@ Para mais informações você pode acessar a [documentação do MDN](https://dev
 
 Por padrão o flex contêiner junta todos os flex itens para caber na mesma linha/coluna (`flex-wrap: nowrap;`), mas com a propriedade `flex-wrap` podemos definir o comportamento de wrap *("embrulho")* do contêiner. Ou seja, você pode fazer com que o flex contêiner crie novas linhas/colunas *(dependendo do eixo)* conforme o tamanho dos flex itens vão ultrapassando o tamanho do **eixo principal** do flex contêiner.
 
-Que tal praticar?
+Que tal praticar? :smiley:
 Volte no seu arquivo HTML e siga os exercícios:
   1. Defina as propriedades `flex-direction: row;`, `justify-content: flex-start;` e `align-items: stretch;`;
   2. Altere o valor da `width` da classe `.item` para `100px`;
@@ -196,7 +196,7 @@ Para mais informações você pode acessar a [documentação do MDN](https://dev
 
 #### align-content
 
-Você pode controlar o espaçamento entre as linhas/colunas criadas pelo wrap com a propriedade `align-content`. Essa propriedade possui valores semelhantes ao do `justify-content`, porém seu valor padrao é o `normal`.
+Você pode controlar o espaçamento entre as linhas/colunas criadas pelo wrap com a propriedade `align-content`. Essa propriedade possui valores semelhantes ao do `justify-content`, porém seu valor padrao é o `normal`. :flushed:
 
 É importante entender que essa propriedade não vai ter efeito caso a propriedade `flex-wrap` tenha o valor `nowrap`.
 
@@ -221,7 +221,7 @@ A propriedade `flex-shrink` permite aos flex itens diminuírem de tamanho caso o
 
 O valor recebido pela propriedade é um número que especifica a razão que o item vai diminuir em relação aos outros itens. Quando essa propriedade não é definida seu valor padrão é `1`.
 
-Que tal exercitar?
+Que tal exercitar? :grinning:
   1. Antes de começar você deve remover todas as propriedades da classe `.container` que se referem ao flex, deixando apenas o `display: flex;`;
   2. Remova o comentário da propriedade `height` *(agora na classe `.item`)* e altere a `width` para `75px`;
   3. Adicionar a propriedade `flex-shrink: 1;` para o seletor `.item:nth-of-type(3)`, nada muda;
@@ -233,7 +233,7 @@ Para mais informações você pode acessar a [documentação do MDN](https://dev
 
 Conforme você aprendeu na propriedade anterior que se refere a razão que o item vai diminuir, a propriedade `flex-grow` define a razão que o item vai aumentar conforme o tamanho do flex contêiner aumenta. A propriedade também recebe como valor um número e tem como valor padrão `0`.
 
-Aqui estão alguns exercícios para você praticar:
+Aqui estão alguns exercícios para você praticar: :smiley:
   1. Para esse exercício você deve retornar o valor da `width` para `25px`;
   2. Adicione a propriedade `flex-grow: 0;` para o seletor `.item:nth-of-type(3)`, nada muda;
   3. Altere o seu valor para `1` e veja o que acontece;
@@ -247,7 +247,7 @@ Caso você queira definir um valor inicial para o tamanho do flex item a proprie
 
 Quando essa propriedade não é definida seu comportamento padrão é ajustar o tamanho baseado no conteúdo e tem valor padrão de `auto`.
 
-Habemus exercícios:
+Habemus exercícios: :satisfied:
   1. Adicione a propriedade `flex-basis: 50px;` na classe `.item`;
   2. Perceba que as propriedades `flex-shrink` e `flex-grow` dos seletores nao tem mais efeito pois os flex itens ocupam todo o espaço do flex contêiner;
   3. Agora mude o valor para `40px`, as propriedades `flex-shrink` e `flex-grow` voltam a funcionar;
@@ -264,7 +264,7 @@ Exemplo:
 flex: 0 1 auto;
 ```
 
-Exercícios? ~~Não~~ Sim, exercícios!
+Exercícios? ~~Não~~ Sim, exercícios! :grin:
   1. Remova as propriedades `flex-basis`, `flex-shrink` e `flex-grow` dos seletores e da classe `.item`;
   2. Adicione a propriedade `flex: 0 1 auto;` na classe `.item`, nada muda;
   3. Altere os valores conforme você aprendeu nas propriedades passadas;
@@ -530,17 +530,17 @@ Uma pessoa desenvolvedora gostou muito da página que você criou e pediu alguns
 
 ## Recursos Adicionais
 
-[CSS FlexBox: Um Guia Visual](https://www.alura.com.br/artigos/css-guia-do-flexbox?gclid=EAIaIQobChMIleKjwumu8AIV0AaICR20pA9hEAAYASAAEgIxcvD_BwE "Alura")
-
 [Guia de Flexbox escrito pela MDN](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox "MDN")
 
-[Guia completo para Flexbox (em inglês)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/ "CSS-Tricks")
+[Guia completo para Flexbox (inglês)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/ "CSS-Tricks")
 
-[Ajude o Froggy e seus amigos utilizando CSS](https://flexboxfroggy.com/ "Flexbox Froggy")
+[Aprenda Flexbox com exemplos visuais](https://origamid.com/projetos/flexbox-guia-completo/ "Origamid")
 
-[Aprenda Flexbox com um jogo de tower defense](http://www.flexboxdefense.com/ "Flebox Defense")
+[Ajude o Froggy e seus amigos utilizando CSS](https://flexboxfroggy.com/ "Flexbox Froggy") :frog:
 
-[Escreva comandos do Flexbox para se defender de hordas zumbis](https://mastery.games/flexboxzombies/ "Flexbox Zombies")
+[Aprenda Flexbox com um jogo de tower defense](http://www.flexboxdefense.com/ "Flebox Defense") :office:
+
+[Escreva comandos do Flexbox para se defender de hordas zumbis](https://mastery.games/flexboxzombies/ "Flexbox Zombies") :boom:
 
 ## Gabarito
 
