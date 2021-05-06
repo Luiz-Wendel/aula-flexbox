@@ -494,9 +494,38 @@ Agora a prática!
   Tente obter algo parecido com este exemplo:
     ![ex-08](https://drive.google.com/uc?export=view&id=1Fh-tz6WlDjk6lr6ROJ8f79jXggB7_GB-)
 
-  ~~Por hoje eh soh pessoal!~~ Agora que você finalizou os exercícios, que tal fazer os exercícios extras para treinar sobre as propriedades dos flex itens?
+~~Por hoje eh soh pessoal!~~ Agora que você finalizou os exercícios, que tal fazer os exercícios extras para treinar sobre as propriedades dos flex itens? *(Você pode utilizar os mesmos arquivos que criou nestes exercícios, ou se preferir, copiar o gabarito do exercício 8)*
 
-<!-- TODO: EXTRAS -->
+### Exercícios extras
+
+Uma pessoa desenvolvedora gostou muito da pagina que você criou e pediu alguns ajustes para poder começar a usar a página para lecionar novas pessoas desenvolvedoras sobre os códigos HTTP:
+  1. Ela percebeu que os métodos mais acessados são os erros, então pediu para que as seções de erro estivessem antes das demais seções;
+  ![ex-extra-01](https://drive.google.com/uc?export=view&id=1NWoC7Wv-Vi_u4AuRJCz7B_lhsI8sx-oE)
+
+  2. Foi pedido também para fazer o mesmo com os links da barra de navegação;
+  ![ex-extra-02](https://drive.google.com/uc?export=view&id=1SempZvSMkZDL53FmV8DhPCeEEOQb5qza)
+
+  3. Ela achou o tamanho das imagens pequeno demais e pediu para que o valor base para cada uma fosse de `400px`; *(não esqueça de alterar a `width` e `height` da tag `img` para `100%` para ter efeito)*
+  ![ex-extra-03](https://drive.google.com/uc?export=view&id=1QgHQ0ta9-LId4LyfeUoZ9xUEnCVKINA4)
+
+  4. Ela também pediu para que as imagens da direita aumentassem em uma razão de `2`; *(Diminua a largura da página para ver o resultado)*
+  ![ex-extra-04](https://drive.google.com/uc?export=view&id=1Hwt8sNrzHovmEkkhThyZrajVF-OqXqkh)
+
+  5. Para finalizar, ela pediu para adicionar os códigos de cada seção, depois do título. E que cada código que ocupe uma posição ímpar diminua de tamanho em uma razão maior que os outros.
+  Lista dos códigos usados na página *(existem outros)*:
+  * 100, 101, 102;
+  * 200, 201, 202, 204, 206, 207;
+  * 300, 301, 302, 303, 304, 305, 307, 308;
+  * 400, 401, 402, 404, 405, 406, 408, 409;
+  * 500, 501, 502, 503, 504, 506.
+    Siga as instruções:
+    5.1. Crie uma `div` e insira os códigos dentro de um parágrafo;
+    5.2. Coloque os códigos na mesma linha;
+    5.3. Defina um tamanho base para os parágrafos de `100px`;
+    5.4. Defina uma cor de fundo para os parágrafos;
+    5.5. Faça com que os parágrafos em posição ímpar diminuam numa razão de `2`;
+    5.6. Mude a cor de fundo dos parágrafos em posição ímpar para melhor verificar o comportamento do item anterior. *(Não se esqueça de diminuir a largura da página para verificar o efeito)*
+  ![ex-extra-05](https://drive.google.com/uc?export=view&id=1H0P13H2tmwhiWRtQCl0d4pCRt0aGK15E)
 
 ## Recursos Adicionais
 
@@ -873,5 +902,378 @@ Gabarito dos exercícios:
     text-decoration: none;
     color: darkred;
     font-weight: 900;
+  }
+  ```
+
+### Exercícios extras
+
+Gabarito dos exercícios extras:
+  1. Ela percebeu que os métodos mais acessados são os erros, então pediu para que as seções de erro estivessem antes das demais seções;
+  ```css
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #client, #server {
+    order: -1;
+  }
+  ```
+
+  2. Foi pedido também para fazer o mesmo com os links da barra de navegação;
+  ```css
+  .links ul li:nth-child(4),
+  .links ul li:nth-child(5) {
+    order: -1;
+  }
+  ```
+
+  3. Ela achou o tamanho das imagens pequeno demais e pediu para que o valor base para cada uma fosse de `400px`;
+  ```css
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .image {
+    flex-basis: 400px;
+  }
+  ```
+
+  4. Ela também pediu para que as imagens da direita aumentassem em uma razão de `2`;
+  ```css
+  .image:nth-child(even) {
+    flex-grow: 2;
+  }
+  ```
+
+  5. Para finalizar, ela pediu para adicionar os códigos de cada seção, depois do título. E que cada código que ocupe uma posição ímpar diminua de tamanho em uma razão maior que os outros.
+  Arquivo index.html:
+  ```html
+  <!DOCTYPE html>
+  <html lang="pt-br">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Flexbox - HTTP Gato</title>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous"
+      />
+      <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+      <header>
+        <a href="#" id="home">
+          <i id="logo" class="fas fa-cat"></i>
+          <p>HTTP Gato</p>
+        </a>
+        <nav class="links">
+          <ul>
+            <li>Informação</li>
+            <li>Sucesso</li>
+            <li>Redirecionamentos</li>
+            <li>Cliente</li>
+            <li>Servidor</li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section id="information">
+          <h1>Respostas de informação</h1>
+          <div class="codes">
+            <p>100</p>
+            <p>101</p>
+            <p>102</p>
+          </div>
+          <div class="images-container">
+            <div class="image">
+              <img src="https://http.cat/100" alt="Erro 100" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/101" alt="Erro 101" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/102" alt="Erro 102" />
+            </div>
+          </div>
+        </section>
+        <section id="success">
+          <h1>Respostas de sucesso</h1>
+          <div class="codes">
+            <p>200</p>
+            <p>201</p>
+            <p>202</p>
+            <p>204</p>
+            <p>206</p>
+            <p>207</p>
+          </div>
+          <div class="images-container">
+            <div class="image">
+              <img src="https://http.cat/200" alt="Erro 200" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/201" alt="Erro 201" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/202" alt="Erro 202" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/204" alt="Erro 204" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/206" alt="Erro 206" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/207" alt="Erro 207" />
+            </div>
+          </div>
+        </section>
+        <section id="redirection">
+          <h1>Redirecionamentos</h1>
+          <div class="codes">
+            <p>300</p>
+            <p>301</p>
+            <p>302</p>
+            <p>303</p>
+            <p>304</p>
+            <p>305</p>
+            <p>307</p>
+            <p>308</p>
+          </div>
+          <div class="images-container">
+            <div class="image">
+              <img src="https://http.cat/300" alt="Erro 300" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/301" alt="Erro 301" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/302" alt="Erro 302" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/303" alt="Erro 303" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/304" alt="Erro 304" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/305" alt="Erro 305" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/307" alt="Erro 307" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/308" alt="Erro 308" />
+            </div>
+          </div>
+        </section>
+        <section id="client">
+          <h1>Erros do cliente</h1>
+          <div class="codes">
+            <p>400</p>
+            <p>401</p>
+            <p>402</p>
+            <p>404</p>
+            <p>405</p>
+            <p>406</p>
+            <p>408</p>
+            <p>409</p>
+          </div>
+          <div class="images-container">
+            <div class="image">
+              <img src="https://http.cat/400" alt="Erro 400" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/401" alt="Erro 401" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/402" alt="Erro 402" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/404" alt="Erro 404" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/405" alt="Erro 405" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/406" alt="Erro 406" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/408" alt="Erro 408" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/409" alt="Erro 409" />
+            </div>
+          </div>
+        </section>
+        <section id="server">
+          <h1>Erros do servidor</h1>
+          <div class="codes">
+            <p>500</p>
+            <p>501</p>
+            <p>502</p>
+            <p>503</p>
+            <p>504</p>
+            <p>506</p>
+          </div>
+          <div class="images-container">
+            <div class="image">
+              <img src="https://http.cat/500" alt="Erro 500" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/501" alt="Erro 501" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/502" alt="Erro 502" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/503" alt="Erro 503" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/504" alt="Erro 504" />
+            </div>
+            <div class="image">
+              <img src="https://http.cat/506" alt="Erro 506" />
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <p>
+          Imagens obtidas do site <a href="https://http.cat/">http.cat</a> &copy;
+          HTTP Gato
+        </p>
+      </footer>
+    </body>
+  </html>
+  ```
+
+  Arquivo style.css:
+  ```css
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: darkred;
+  }
+
+  header a {
+    text-decoration: none;
+    color: darkred;
+    font-weight: 900;
+  }
+
+  #logo {
+    margin-right: 0.5em;
+  }
+
+  #home {
+    display: flex;
+  }
+
+  .links {
+    width: 60%;
+  }
+
+  .links ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .links ul li {
+    padding: 0.25em;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .images-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .image {
+    padding: 1em;
+  }
+
+  footer {
+    background-color: black;
+    color: darkred;
+    padding: 0.5em;
+    display: flex;
+    justify-content: center;
+  }
+
+  footer a {
+    text-decoration: none;
+    color: darkred;
+    font-weight: 900;
+  }
+
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #client, #server {
+    order: -1;
+  }
+
+  .links ul li:nth-child(4),
+  .links ul li:nth-child(5) {
+    order: -1;
+  }
+
+  .image {
+    flex-basis: 400px;
+  }
+
+  .image:nth-child(even) {
+    flex-grow: 2;
+  }
+
+  .codes {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .codes p {
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    font-weight: 600;
+    text-align: center;
+    flex-basis: 100px;
+  }
+
+  .codes p:nth-child(odd) {
+    background-color: darkgray;
+    flex-shrink: 2;
   }
   ```
