@@ -6,7 +6,7 @@ Alinhar e distribuir corretamente o conteúdo da página HTML é essencial para 
 
 O Flexbox foi um módulo de layout do CSS criado para facilitar a criação de estruturas flexíveis e responsivas que ajudam no alinhamento e distribuição dos elementos na página, sendo possível ser feito na vertical e/ou na horizontal.
 
-Para melhor entender o conceito de flexbox você deve compreender dois  conceitos muito utilizados ao se tratar do assunto, o flex contêiner e flex item. Um flex container é um elemento pai que possui a propriedade flex, e os seus respectivos elementos filhos são denominados flex itens.
+Para melhor entender o conceito de flexbox você deve compreender dois  conceitos muito utilizados ao se tratar do assunto, o flex contêiner e flex item. Um flex contêiner é um elemento pai que possui a propriedade flex, e os seus respectivos elementos filhos são denominados flex itens.
 
 ## Você será capaz de:
 
@@ -20,13 +20,15 @@ Entender conceitos referentes ao Flexbox como:
   * Flex contêiner;
   * Flex item;
   * Eixo principal;
-  * Eixo cruzado.
+  * Eixo cruzado;
+  * Wrap;
+  * Entre outros.
 
 ## Porque isso é importante?
 
-Atualmente você pode entrar em um site de diversas maneiras (através de um computador, celular, tablet, videogame, entre outros) e com isso fica difícil definir qual o tamanho da tela que vai mostrar o conteúdo. É aí que entra a necessidade de um elemento flexível, que pode alterar o seu tamanho e a disposição de seu conteúdo conforme o tamanho disponível na tela.
+Atualmente você pode entrar em um site de diversas maneiras (através de um computador, celular, tablet, videogame, etc.) e com isso fica difícil definir qual o tamanho da tela que vai mostrar o conteúdo. É aí que entra a necessidade de um elemento flexível, que pode alterar o seu tamanho e a disposição de seu conteúdo conforme o tamanho disponível na tela.
 
-Imagine, por exemplo, que sempre que você precisasse adicionar um novo item a uma lista de produtos tivesse que adicionar a posição exata dele na tela para ele ficar alinhado com os demais itens, essa forma seria muito complexa. Agora imagine que você tenha um elemento que conforme você vai adicionando itens dentro dele ele se expande de forma a adicionar o novo elemento e ainda deixa ele alinhado e agrupado conforme a posição dos demais itens, independentemente de saber o tamanho do conteúdo, essa segunda forma seria muito mais simples. E esse é o comportamento que você consegue ao utilizar o Flexbox.
+Imagine, por exemplo, que sempre que você precisasse adicionar um novo item a uma lista de produtos tivesse que adicionar a posição exata dele na tela para ele ficar alinhado com os demais itens, essa forma seria muito complexa. Agora imagine que você tenha um elemento que, conforme você vai adicionando itens dentro dele, ele se expande de forma a adicionar o novo elemento e ainda o deixa alinhado e agrupado conforme a posição dos demais itens, independentemente de saber o tamanho do conteúdo, essa segunda forma seria muito mais simples. E esse é o comportamento que você consegue ao utilizar o Flexbox.
 
 ## Conteúdos
 
@@ -40,9 +42,9 @@ A propriedade `display: flex` em um elemento permite que você use outras propri
 
 #### flex-direction
 
-A propriedade `flex-direction` define a direção de alinhamento dos elementos filhos do contêiner. Quando essa propriedade não é definida seu comportamento padrão é `row` *(linha)*.
+A propriedade `flex-direction` define a direção de alinhamento dos elementos filhos do contêiner. Quando essa propriedade não é definida seu comportamento padrão é `row` *(em tradução livre: linha)*.
 
-Para melhor entender como essa propriedade funciona você tem que entender um conceito muito usado no Flexbox, o main-axis *(eixo principal)* e cross-axis *(eixo cruzado)*. A propriedade `flex-direction` possui dois valores principais: `row` e `column`. A diferença entre esses dois valores são as direções do eixo principal e do eixo cruzado.
+Para melhor entender como essa propriedade funciona você tem que entender um conceito muito usado no Flexbox, o **main-axis** *(em tradução livre: eixo principal)* e **cross-axis** *(em tradução livre: eixo cruzado)*. A propriedade `flex-direction` possui dois valores principais: `row` e `column`. A diferença entre esses dois valores são as direções do *eixo principal* e do *eixo cruzado*.
 
 O `flex-direction: row` define o **eixo principal** como sendo **horizontal**, da esquerda para a direita, e o **eixo cruzado** sendo **vertical**, de cima para baixo.
 
@@ -117,16 +119,16 @@ Enquanto que o `flex-direction: column` define o **eixo principal** como sendo *
 
 Exercícios (altere apenas o CSS, mais especificamente a classe `.container`):
   1. Adicione a propriedade `display: flex;`;
-  2. Quando você define o `display` como `flex` temos o comportamento `flex-direction: row;` como padrão, mas adicione essa propriedade mesmo assim (nada deve mudar);
-  3. Outro valor utilizado para essa propriedade é o `row-reverse` *(linha reversa)*, mude o valor da propriedade `flex-direction` para este novo valor e preste atenção nos números;
-  4. Você observou os principais valores para o eixo principal horizontal, agora mude a propriedade `flex-direction` para `column` *(coluna)* e observe o eixo principal mudar para a vertical;
-  5. Você também pode inverter o sentido do eixo principal que nem foi feito no terceiro exemplo mudando o valor do `flex-direction` para `column-reverse` *(coluna reversa)*.
+  2. Quando você define o `display` como `flex` temos o comportamento `flex-direction: row;` como padrão, mas adicione essa propriedade mesmo assim; *(nada deve mudar)*
+  3. Outro valor utilizado para essa propriedade é o `row-reverse` *(em tradução livre: linha reversa)*, mude o valor da propriedade `flex-direction` para este novo valor e preste atenção nos números;
+  4. Você observou os principais valores para o eixo principal horizontal, agora mude a propriedade `flex-direction` para `column` *(em tradução livre: coluna)* e observe o eixo principal mudar para a vertical;
+  5. Você também pode inverter o sentido do eixo principal que nem foi feito no terceiro exemplo mudando o valor do `flex-direction` para `column-reverse` *(em tradução livre: coluna reversa)*.
 
 Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex-direction).
 
 #### justify-content
 
-A propriedade `justify-content` define como os flex itens serão alinhados e/ou espaçados entre si. Quando essa propriedade não é definida seu comportamento padrão é o `flex-start` *(flex-início)*.
+A propriedade `justify-content` define como os flex itens serão alinhados e/ou espaçados entre si. Quando essa propriedade não é definida seu comportamento padrão é o `flex-start` *(em tradução livre: flex-início)*.
 
 É importante notar que o alinhamento dessa propriedade é feito conforme o **eixo principal** do flex contêiner.
 
@@ -135,34 +137,34 @@ Volte no seu arquivo HTML e siga os exercícios:
   1. Retorne o valor de `flex-direction` para `row`;
   2. Adicione a propriedade `justify-content: flex-start;`, nada mudou! :disappointed_relieved: Isso se deve ao fato do `flex-start` ser o valor padrão;
   3. Agora teste com os valores:
-    3.1. `flex-end` *(flex-fim)*;
-    3.2. `space-between` *(espaço-entre)*;
-    3.3. `space-around` *(espaço-em-volta)*;
-    3.4. `space-evenly` *(espaço-igualitário)*;
-    3.5. `center` *(centro)*.
+    3.1. `flex-end` *(em tradução livre: flex-fim)*;
+    3.2. `space-between` *(em tradução livre: espaço-entre)*;
+    3.3. `space-around` *(em tradução livre: espaço-em-volta)*;
+    3.4. `space-evenly` *(em tradução livre: espaço-igual)*;
+    3.5. `center` *(em tradução livre: centro)*.
   4. Caso você fique curioso vale a pena repetir o terceiro exemplo com o `flex-direction: row;`.
 
 Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content).
 
 #### align-items
 
-A propriedade `align-items` tem o com objetivo alinhar os flex itens conforme o **eixo cruzado**. Quando essa propriedade não é definida seu comportamento padrão é o `stretch` *(esticar)*.
+A propriedade `align-items` tem o com objetivo alinhar os flex itens conforme o **eixo cruzado**. Quando essa propriedade não é definida seu comportamento padrão é o `stretch` *(em tradução livre: esticar)*.
 
 Pronto para ver na prática?
 Volte no seu arquivo HTML e siga os exercícios:
   1. Altere as propriedades para ficar assim: `flex-direction: row;` e `justify-content: flex-start;`;
   2. Adicione a propriedade `align-items: stretch`, nada mudou! :pensive: Imagino que você já saiba o porquê, certo? Isso mesmo! `stretch` eh o valor padrão;
   3. Agora teste com os valores:
-    3.1. `flex-start` *(flex-início)*;
-    3.2. `flex-end` *(flex-fim)*;
-    3.3. `center` *(centro)*;
-  4. Pequeno desafio: tentar deixar o conteúdo centralizado no quadrado vermelho.
+    3.1. `flex-start`;
+    3.2. `flex-end`;
+    3.3. `center`.
+  4. Pequeno desafio: tente deixar o conteúdo centralizado no quadrado vermelho.
 
 Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/align-items).
 
 #### flex-wrap
 
-Por padrão (`flex-wrap: nowrap`) o flex contêiner junta todos os flex itens para caber na mesma linha/coluna, mas com a propriedade `flex-wrap` podemos definir o comportamento de wrap *("embrulho")* do contêiner. Ou seja, você pode fazer com que o flex contêiner crie novas linhas/colunas (dependendo do eixo) conforme o tamanho dos flex itens vão ultrapassando o tamanho do **eixo principal** do flex contêiner.
+Por padrão o flex contêiner junta todos os flex itens para caber na mesma linha/coluna (`flex-wrap: nowrap;`), mas com a propriedade `flex-wrap` podemos definir o comportamento de wrap *("embrulho")* do contêiner. Ou seja, você pode fazer com que o flex contêiner crie novas linhas/colunas *(dependendo do eixo)* conforme o tamanho dos flex itens vão ultrapassando o tamanho do **eixo principal** do flex contêiner.
 
 Que tal praticar?
 Volte no seu arquivo HTML e siga os exercícios:
@@ -170,15 +172,15 @@ Volte no seu arquivo HTML e siga os exercícios:
   2. Altere o valor da `width` da classe `.item` para `100px`;
   3. Adicione `flex-wrap: nowrap;`, nada deve mudar. Fique atento se você está adicionando para a classe `.container`;
   4. Teste os outros valores:
-    4.1. `wrap` *(embrulhar)*;
-    4.2. `wrap-reverse` *(embrulhar-inverso)*.
+    4.1. `wrap` *(em tradução livre: embrulhar)*;
+    4.2. `wrap-reverse` *(em tradução livre: embrulhar-inverso)*.
   5. Agora mude o valor da `width` da classe `.item` de volta para `25px`.
 
 Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/pt-BR/docs/Web/CSS/flex-wrap).
 
 #### flex-flow
 
-Como as propriedades `flex-direction` e`flex-wrap` são muito usadas em conjunto, foi criado uma nova propriedade que combina as duas, a `flex-flow`, que recebe como valor duas `strings` separadas por um espaço, a primeira string referente ao `flex-direction`e a segunda string referente ao `flex-wrap`.
+Como as propriedades `flex-direction` e`flex-wrap` são muito usadas em conjunto, foi criado uma nova propriedade que combina as duas, a `flex-flow`. Propriedade que recebe como valor duas `strings` separadas por um espaço, a primeira string referente ao `flex-direction`e a segunda string referente ao `flex-wrap`.
 
 Exemplo:
 ```CSS
@@ -194,12 +196,12 @@ Para mais informações você pode acessar a [documentação do MDN](https://dev
 
 #### align-content
 
-Você pode controlar o espaçamento entre as linhas/colunas criadas pelo wrap com a propriedade `align-content`. Essa propriedade possui valores semelhantes ao do `justify-content`, porem seu valor padrao eh o `normal`.
+Você pode controlar o espaçamento entre as linhas/colunas criadas pelo wrap com a propriedade `align-content`. Essa propriedade possui valores semelhantes ao do `justify-content`, porém seu valor padrao é o `normal`.
 
 É importante entender que essa propriedade não vai ter efeito caso a propriedade `flex-wrap` tenha o valor `nowrap`.
 
 Você pode testar a nova propriedade com alguns exercícios:
-  1. Defina as seguintes propriedades: `flex-flow: row wrap;`, `justify-content: flex-start;` e `align-items: stretch;`;
+  1. Redefina as seguintes propriedades: `flex-flow: row wrap;`, `justify-content: flex-start;` e `align-items: stretch;`;
   2. Adicione a propriedade `align-content: normal;`, nada muda;
   3. Teste os seguintes valores:
     3.1. `flex-start`;
@@ -220,7 +222,7 @@ A propriedade `flex-shrink` permite aos flex itens diminuírem de tamanho caso o
 O valor recebido pela propriedade é um número que especifica a razão que o item vai diminuir em relação aos outros itens. Quando essa propriedade não é definida seu valor padrão é `1`.
 
 Que tal exercitar?
-  1. Antes de começar você deve remover todas as propriedades da classe `.container` que se referem ao flex, e deixar apenas o `display: flex;`;
+  1. Antes de começar você deve remover todas as propriedades da classe `.container` que se referem ao flex, deixando apenas o `display: flex;`;
   2. Remova o comentário da propriedade `height` *(agora na classe `.item`)* e altere a `width` para `75px`;
   3. Adicionar a propriedade `flex-shrink: 1;` para o seletor `.item:nth-of-type(3)`, nada muda;
   4. Agora teste com outros valores (exemplo: 0, 2), você também pode adicionar o `flex-shrink` para o seletor `.item:nth-of-type(5)`.
@@ -255,7 +257,7 @@ Para mais informações você pode acessar a [documentação do MDN](https://dev
 
 #### flex
 
-Todas as propriedades do flex item vistas anteriormente podem ser estabelecidas através de uma única propriedade do flex item, a `flex`, que recebe como valor 3 strings separadas por espaço, a primeira referente ao `flex-grow`, a segunda referente ao `flex-shrink` e a terceira referente ao `flex-basis`.
+Todas as propriedades do flex item vistas anteriormente podem ser estabelecidas através de uma única propriedade, a `flex`, que recebe como valor 3 strings separadas por espaço, a primeira referente ao `flex-grow`, a segunda referente ao `flex-shrink` e a terceira referente ao `flex-basis`.
 
 Exemplo:
 ```CSS
@@ -272,26 +274,26 @@ Para mais informações você pode acessar a [documentação do MDN](https://dev
 
 #### order
 
-Mudar a ordem em que os flex itens são mostrados dentro do flex contêiner? Sim, você pode! Basta usar a propriedade `order`, que recebe um número como valor e que se refere a posição dele referente aos outros elementos. Quando você não define a propriedade o seu valor padrão é `0`.
+Mudar a ordem em que os flex itens são mostrados dentro do flex contêiner? Sim, você pode! Basta usar a propriedade `order`, que recebe um número como valor. Quando você não define a propriedade o seu valor padrão é `0`.
 
 A ordem que os elementos aparecem é feita em ordem crescente do valor da propriedade `order`. Mas se mais de um flex item tiver o mesmo valor, o que acontece? O flex item que vier primeiro no HTML vai aparecer antes. Também é importante ressaltar que você pode utilizar valores negativos. :wink:
 
 Praticar? ~~Nunca~~ Sempre!
   1. Adicione a propriedade `order: 0;` ao seletor `.item:nth-of-type(3)`, nada muda;
   2. Agora coloque um valor maior que `0`;
-  3. Agora coloque um valor menor que `0`;
-  4. Adicione a propriedade `order` ao outro seletor, você também pode criar outros seletores, deixe a imaginação à solta.
+  3. Teste com um valor menor que `0`;
+  4. Adicione a propriedade `order` ao outro seletor. *(você também pode criar outros seletores, deixe a imaginação à solta)*
 
 Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/order).
 
 #### align-self
 
-Assim como você aprendeu na propriedade anterior, também é possível mudar o alinhamento no eixo principal de um flex item, você também pode mudar o alinhamento no **eixo cruzado** de um flex item específico sem alterar o alinhamento dos outros flex itens. Para conseguir esse efeito você pode usar a propriedade `align-self`.
+Você pode mudar o alinhamento no **eixo cruzado** de um flex item específico sem alterar o alinhamento dos outros flex itens. Para conseguir esse efeito você pode usar a propriedade `align-self`.
 
 Exercícios finais: :sweat_smile:
   1. Adicione a propriedade `align-self: flex-start;` ao seletor `.item:nth-of-type(3)`, nada muda;
   2. Agora altere seu valor para `center`;
-  3. Deixe a imaginação fluir e teste com outros valores, vale a pena colocar a propriedade em outros seletores para testar também.
+  3. Deixe a imaginação fluir e teste com outros valores. *(vale a pena colocar a propriedade em outros seletores para testar também)*
 
 Para mais informações você pode acessar a [documentação do MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/align-self).
 
@@ -299,7 +301,7 @@ Para mais informações você pode acessar a [documentação do MDN](https://dev
 
 ### HTTP Gato
 
-Agora você vai criar uma página flexível usando imagens do site [HTTP Cats](https://http.cat/).
+Agora você vai por em prática o que aprendeu e criar uma página flexível usando imagens do site [HTTP Cats](https://http.cat/).
 
 Copie o HTML abaixo em um arquivo `index.html`:
 
@@ -442,7 +444,7 @@ Copie o HTML abaixo em um arquivo `index.html`:
 </html>
 ```
 
-E o conteúdo abaixo em um arquivo `style.css`, o arquivo CSS tem que estar na mesma pasta do arquivo HTML, caso você queira colocar em outra pasta não se esqueça de mudar o caminho do link no arquivo HTML:
+E o conteúdo abaixo em um arquivo `style.css`, o arquivo CSS tem que estar na mesma pasta do arquivo HTML, mas caso você queira colocar em outra pasta não se esqueça de mudar o caminho do link no arquivo HTML:
 
 ```css
 * {
@@ -457,20 +459,19 @@ img {
 }
 ```
 
-Os prints dos exemplos usados foram feitos usando o tamanho da página como sendo de um laptop (1440px, 900px), você pode utilizar a extensão [Window Resizer](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh) para a desenvolver a página no mesmo tamanho.
+Os prints dos exemplos usados foram feitos usando o tamanho da página como sendo de um laptop *(1440px, 900px)*, você pode utilizar a extensão [Window Resizer](https://chrome.google.com/webstore/detail/window-resizer/kkelicaakdanhinjdeammmilcgefonfh)*(disponível para o Google Chrome)* para a desenvolver a página no mesmo tamanho.
 
-Agora a prática!
-  1. Altere o CSS para que a logo e o nome do site fiquem lado a lado, faça a mesma coisa para os itens da tag `nav`;
+Agora mão na massa!
+  1. Altere o CSS para que a logo e o nome do site fiquem lado a lado, faça o mesmo para os itens da tag `nav`;
     ![ex-01](https://drive.google.com/uc?export=view&id=1R-LOEpgfeHu1tlLqnybyatKaySPTTgA7)
 
-  2. Agora faça com que o conteúdo do `header` fique em uma linha e separados entre si e com um espaço entre as bordas horizontais do seu contêiner;
+  2. Agora faça com que o conteúdo do `header` fique em uma linha e com espaço em sua volta;
     ![ex-02](https://drive.google.com/uc?export=view&id=15Ul5Icksy1ji_hSlpdWWSjXGqfffLJnm)
 
   3. Adicione um espaçamento entre os itens de navegação;
     ![ex-03](https://drive.google.com/uc?export=view&id=1PPEYhJEXc9grGUQiDtCE0ZbvkPoRDKwh)
 
-  4. Estilize o `header` da sua maneira, segue um exemplo, mas fique a vontade para estilizar do jeito que o seu coração mandar!;
-    Exemplo:
+  4. Estilize o `header`; *(Segue um exemplo, mas fique a vontade para estilizar do jeito que o seu coração mandar!)*
     ![ex-04](https://drive.google.com/uc?export=view&id=1-jL6lGHcct8gntp6QMvNmxAjOA_TkX4J)
 
   5. Agora você tem que transformar a `div` com a classe `.images-container` em um flex contêiner que, caso o tamanho dos flex itens ultrapasse o tamanho da `div`, adicione novas linhas;
@@ -494,24 +495,24 @@ Agora a prática!
   Tente obter algo parecido com este exemplo:
     ![ex-08](https://drive.google.com/uc?export=view&id=1Fh-tz6WlDjk6lr6ROJ8f79jXggB7_GB-)
 
-~~Por hoje eh soh pessoal!~~ Agora que você finalizou os exercícios, que tal fazer os exercícios extras para treinar sobre as propriedades dos flex itens? *(Você pode utilizar os mesmos arquivos que criou nestes exercícios, ou se preferir, copiar o gabarito do exercício 8)*
+~~Por hoje eh soh pessoal!~~ Agora que você finalizou os exercícios, que tal fazer os exercícios extras para treinar sobre as propriedades dos flex itens? *(Você pode utilizar os mesmos arquivos que criou nestes exercícios ou, se preferir, copiar o gabarito do exercício 8)*
 
 ### Exercícios extras
 
-Uma pessoa desenvolvedora gostou muito da pagina que você criou e pediu alguns ajustes para poder começar a usar a página para lecionar novas pessoas desenvolvedoras sobre os códigos HTTP:
-  1. Ela percebeu que os métodos mais acessados são os erros, então pediu para que as seções de erro estivessem antes das demais seções;
+Uma pessoa desenvolvedora gostou muito da página que você criou e pediu alguns ajustes:
+  1. Ela percebeu que os métodos mais utilizados são os erros, então pediu para que as seções de erro estivessem antes das demais seções;
   ![ex-extra-01](https://drive.google.com/uc?export=view&id=1NWoC7Wv-Vi_u4AuRJCz7B_lhsI8sx-oE)
 
   2. Foi pedido também para fazer o mesmo com os links da barra de navegação;
   ![ex-extra-02](https://drive.google.com/uc?export=view&id=1SempZvSMkZDL53FmV8DhPCeEEOQb5qza)
 
-  3. Ela achou o tamanho das imagens pequeno demais e pediu para que o valor base para cada uma fosse de `400px`; *(não esqueça de alterar a `width` e `height` da tag `img` para `100%` para ter efeito)*
+  3. Ela achou o tamanho das imagens pequeno demais e pediu para que o valor base para cada uma fosse de `400px`; *(não esqueça de alterar a `width` e `height` da tag `img` para `100%`)*
   ![ex-extra-03](https://drive.google.com/uc?export=view&id=1QgHQ0ta9-LId4LyfeUoZ9xUEnCVKINA4)
 
-  4. Ela também pediu para que as imagens da direita aumentassem em uma razão de `2`; *(Diminua a largura da página para ver o resultado)*
+  4. Ela também pediu para que as imagens da direita aumentassem em uma razão igual a `2`; *(Diminua a largura da página para ver o resultado)*
   ![ex-extra-04](https://drive.google.com/uc?export=view&id=1Hwt8sNrzHovmEkkhThyZrajVF-OqXqkh)
 
-  5. Para finalizar, ela pediu para adicionar os códigos de cada seção, depois do título. E que cada código que ocupe uma posição ímpar diminua de tamanho em uma razão maior que os outros.
+  5. Para finalizar, ela pediu para adicionar os códigos de cada seção depois do título. E que cada código que ocupe uma posição ímpar diminua de tamanho em uma razão maior que os outros.
   Lista dos códigos usados na página *(existem outros)*:
   * 100, 101, 102;
   * 200, 201, 202, 204, 206, 207;
@@ -523,15 +524,15 @@ Uma pessoa desenvolvedora gostou muito da pagina que você criou e pediu alguns 
     5.2. Coloque os códigos na mesma linha;
     5.3. Defina um tamanho base para os parágrafos de `100px`;
     5.4. Defina uma cor de fundo para os parágrafos;
-    5.5. Faça com que os parágrafos em posição ímpar diminuam numa razão de `2`;
+    5.5. Faça com que os parágrafos em posição ímpar diminuam numa razão igual a `2`;
     5.6. Mude a cor de fundo dos parágrafos em posição ímpar para melhor verificar o comportamento do item anterior. *(Não se esqueça de diminuir a largura da página para verificar o efeito)*
   ![ex-extra-05](https://drive.google.com/uc?export=view&id=1H0P13H2tmwhiWRtQCl0d4pCRt0aGK15E)
 
 ## Recursos Adicionais
 
-[Guia de Flexbox escrito pela MDN](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox "MDN")
-
 [CSS FlexBox: Um Guia Visual](https://www.alura.com.br/artigos/css-guia-do-flexbox?gclid=EAIaIQobChMIleKjwumu8AIV0AaICR20pA9hEAAYASAAEgIxcvD_BwE "Alura")
+
+[Guia de Flexbox escrito pela MDN](https://developer.mozilla.org/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox "MDN")
 
 [Guia completo para Flexbox (em inglês)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/ "CSS-Tricks")
 
@@ -539,7 +540,7 @@ Uma pessoa desenvolvedora gostou muito da pagina que você criou e pediu alguns 
 
 [Aprenda Flexbox com um jogo de tower defense](http://www.flexboxdefense.com/ "Flebox Defense")
 
-[Escreva comandos do Flexbox para se defender de zumbis](https://mastery.games/flexboxzombies/ "Flexbox Zombies")
+[Escreva comandos do Flexbox para se defender de hordas zumbis](https://mastery.games/flexboxzombies/ "Flexbox Zombies")
 
 ## Gabarito
 
@@ -577,7 +578,7 @@ Gabarito dos exercícios:
   }
   ```
 
-  4. Estilize o `header` da sua maneira, segue um exemplo, mas fique a vontade para estilizar do jeito que o seu coração mandar!;
+  4. Estilize o `header` da sua maneira;
   CSS para o exemplo apresentado:
   ```css
   header {
@@ -940,7 +941,7 @@ Gabarito dos exercícios extras:
   }
   ```
 
-  4. Ela também pediu para que as imagens da direita aumentassem em uma razão de `2`;
+  4. Ela também pediu para que as imagens da direita aumentassem em uma razão igual a `2`;
   ```css
   .image:nth-child(even) {
     flex-grow: 2;
